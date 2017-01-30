@@ -1,0 +1,6 @@
+.intro
+	%h1 Lost anything lately??
+	%p Let's help you get it back
+	= form_tag root_path, :class => "navbar-search pull-left", :method => :get do
+		= text_field_tag :search, nil, :class => "", :placeholder => "Search"
+		
