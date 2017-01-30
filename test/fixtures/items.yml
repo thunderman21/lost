@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  serial: MyText
+  user_id: 
+  date_lost: 2017-01-30
+  location: MyText
+
+two:
+  name: MyText
+  serial: MyText
+  user_id: 
+  date_lost: 2017-01-30
+  location: MyText
