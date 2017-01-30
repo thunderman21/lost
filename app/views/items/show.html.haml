@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @item.name
+%p
+  %strong Serial:
+  = @item.serial
+%p
+  %strong User:
+  = @item.user
+%p
+  %strong Date lost:
+  = @item.date_lost
+%p
+  %strong Location:
+  = @item.location
+= link_to 'Edit', edit_item_path(@item)
+|
+\#{link_to 'Back', items_path}
