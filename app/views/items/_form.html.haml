@@ -1,9 +1,17 @@
 = simple_form_for(@item) do |f|
   = f.error_notification
   .form-inputs
-    = f.input :name
-    = f.input :serial
-    = f.input :date_lost
-    = f.input :location
+    %label Name
+    = f.input :name, label: false
+    %label Details
+    = f.input :details, label: false
+    %label Serial
+    = f.input :serial, label: false
+    %label Date
+    = f.input :date_lost, label: false
+    %label Location
+    = f.input :location, label:false
+    %label Item Type
+    = f.input :item_type, label:false, collection: [ "Lost", "Found"], :include_blank => false
   .form-actions
     = f.button :submit

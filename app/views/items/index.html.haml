@@ -1,23 +1,15 @@
-%h1 Listing Items
-%table
-  %thead
-    %tr
-      %th Name
-      %th Serial
-      %th User
-      %th Date lost
-      %th Location
-      %th{:colspan => "3"}
-  %tbody
-    - @items.each do |item|
-      %tr
-        %td= item.name
-        %td= item.serial
-        %td= item.user
-        %td= item.date_lost
-        %td= item.location
-        %td= link_to 'Show', item
-        %td= link_to 'Edit', edit_item_path(item)
-        %td= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
-= link_to 'New Item', new_item_path
+.content.wrapper
+  %h1 Listing Items
+  
+  - @items.each do |item|
+    .container
+      .header
+        = link_to item.name, item
+      = item.details
+      .footer
+        .left
+          = item.user.name
+        .right
+          = time_ago_in_words(item.created_at)
+  %br/
+  = link_to 'New Item', new_item_path

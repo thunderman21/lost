@@ -107,7 +107,7 @@ body{
 }
 .login{
 	margin:0 auto;
-	padding-top: 6rem;
+	padding-top: 5rem;
 	width:25%;
 	h2{
 		text-align:center;
@@ -133,4 +133,78 @@ body{
 		color: #ffffff;
 		font-size: 1em;
 	}
+}
+.edit_profile{
+	margin-top:-4rem;
+	margin-bottom:3rem;
+}
+.content{
+	margin: 0 auto;
+	margin-bottom:50px;
+
+	h1{
+		font-size: 1.7rem;
+		text-align:justified;
+	}
+	input[type=text],
+	select,
+	textarea{
+		padding: 10px;
+		margin-top:5px;
+		margin-bottom: 5px;
+		width: 400px;
+		box-sizing: border-box;
+		border: 2px solid $primary;
+		font-size: 1em;
+		color: #7F848B;
+	}
+	input[type=submit]{
+		padding: 10px;
+		margin-top:5px;
+		margin-bottom: 5px;
+		width: 400px;
+		background: $primary;
+		border-style: none;
+		color: #ffffff;
+		font-size: 1em;
+	}
+	select{
+		padding: 10px;
+		margin-top:5px;
+		margin-bottom: 5px;
+		width: 130px;
+		background: #ffffff;
+		color: #7F848B;
+		box-sizing: border-box;
+		border: 2px solid $primary;
+		font-size: 1em;
+	}
+	textarea{
+		max-width: 400px;
+		height:200px;
+	}
+	.container{
+		.header{
+			padding: 0;
+			font-size:1rem;
+		}
+		.footer{
+			padding:.5rem 0;
+			.left{
+				float:left;
+			}
+			.right{
+				float:right;
+			}
+		}
+	}
+
+}
+.sm-wrapper{
+	padding-top:2rem;
+	width: 25%;
+}
+.wrapper{
+	padding-top:2rem;
+	width: 60%;
 }
