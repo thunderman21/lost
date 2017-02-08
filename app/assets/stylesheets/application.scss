@@ -14,6 +14,7 @@
  *= require_self
  */
 $primary: #95AFE0;
+$border: #d9dee9;
 html,
 body{
 	color: #7F848B;
@@ -44,6 +45,9 @@ body{
 	padding: 20px;
 	background: transparent;
 	color: #7F848B;
+	margin-bottom:2.5rem;
+	height:50px;
+	border-bottom:1px solid $border;
 	.logo{
 		font-weight: 400;
 		padding: 0;
@@ -54,6 +58,9 @@ body{
 			font-weight: 700;
 			margin:0;
 			padding:0;
+		}
+		a{
+			color:#7F848B;
 		}
 	}
 	.links{
@@ -107,7 +114,7 @@ body{
 }
 .login{
 	margin:0 auto;
-	padding-top: 5rem;
+	padding-top: 2rem;
 	width:25%;
 	h2{
 		text-align:center;
@@ -183,21 +190,7 @@ body{
 		max-width: 400px;
 		height:200px;
 	}
-	.container{
-		.header{
-			padding: 0;
-			font-size:1rem;
-		}
-		.footer{
-			padding:.5rem 0;
-			.left{
-				float:left;
-			}
-			.right{
-				float:right;
-			}
-		}
-	}
+
 
 }
 .sm-wrapper{
@@ -205,6 +198,71 @@ body{
 	width: 25%;
 }
 .wrapper{
-	padding-top:2rem;
+	margin: 0 auto;
 	width: 60%;
+}
+.container{
+	width:100%;
+	border: 1px solid $border;
+	border-radius: .3rem;
+	padding:1rem;
+	margin-bottom:.5rem;
+	position:relative;
+	z-index: 1;
+	display: table;
+	.content,
+	.footer{
+		display:table-cell;
+		vertical-align: middle;
+		font-size:.9em;
+	}
+	.footer{
+		text-transform: uppercase;
+		font-weight:700;
+		font-size: .75em;
+		position:relative;
+		width:100px;
+	}
+	.header{
+		font-size:1.5em;
+	}
+
+}
+.search{
+	display:table;
+	width:100%;
+	padding: 1rem;
+	border-bottom: 1px solid $border;
+	margin-bottom: 1rem;
+	#search{
+		width:100%;
+	}
+	input[type=text],
+	input[type=submit]{
+		display:table-cell;
+		vertical-align:middle;
+		font-size: .9em;
+	}
+	input[type=text]{
+		padding: .5rem;
+		margin-top:5px;
+		margin-bottom: 5px;
+		box-sizing: border-box;
+		border-bottom: none;
+		box-shadow: none;
+		border-style:none;
+		border-color: none;
+		border-radius: .3rem;
+		font-size: 1em;
+		color: #7F848B;
+		&:focus,
+		&:hover,
+		&:active{
+			outline: none;
+		}
+	}
+	
+}
+.will_paginate{
+	margin-bottom:2rem;
 }

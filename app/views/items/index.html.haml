@@ -1,15 +1,27 @@
-.content.wrapper
-  %h1 Listing Items
-  
+
+.header.wrapper
+  .search
+    = form_tag(items_path, method:"get") do
+      = text_field_tag :search, params[:search], placeholder: "Search for Locations, Serial Numbers or the Names of the items you are looking for"
+
+  - if @items.blank?
+    %p There are no hits for your search
+
+
   - @items.each do |item|
     .container
-      .header
-        = link_to item.name, item
-      = item.details
+      .content
+        .header
+          = link_to item.name, item
+
+        = item.user.name
+        %span
+          &bull;
+        Posted 
+        = time_ago_in_words(item.created_at)
       .footer
-        .left
-          = item.user.name
-        .right
-          = time_ago_in_words(item.created_at)
+        = item.item_type
+
+  = will_paginate @items, class: "will_paginate"
   %br/
-  = link_to 'New Item', new_item_path
+

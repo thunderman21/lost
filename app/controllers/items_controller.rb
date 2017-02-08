@@ -5,12 +5,21 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.all.paginate(page: params[:page], per_page: 10)
+    if params[:search]
+      @items = Item.search(params[:search]).order("created_at DESC").paginate(page: params[:page], per_page: 10)
+    else
+      @items = Item.all.order("created_at DESC").paginate(page: params[:page], per_page: 10)
+    end
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+  end
+
+  def search
+   @search = params[:search][:q]
   end
 
   # GET /items/new
